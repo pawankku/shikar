@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "pawan-rg"
-    storage_account_name = "storage53637337"
-    container_name       = "container"
-    key                  = "prod.terraform.tfstate"
+    resource_group_name  = var.resource_group
+    storage_account_name = var.storage_account
+    container_name       = var.container_name
+    key                  = var.key
     # use_azuread_auth     = true
   }
 }
