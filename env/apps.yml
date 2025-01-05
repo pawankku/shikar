@@ -1,0 +1,6 @@
+appservices:
+  - name: webapp
+    os_type: linux
+    application_stack:
+      name: python|3.11
+      runtime_version: "python3.11"
