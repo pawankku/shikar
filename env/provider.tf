@@ -17,13 +17,4 @@ terraform {
 
 provider "azurerm" {
   features {}
-
-  # Use environment variables or specify credentials directly here:
-  subscription_id = "7869862f-d28a-4869-ae00-17ce96a1935a"
-  client_id       = "957f7280-3f81-4cbf-a46f-349147ff81a8"
-  client_secret   = "2KJf61B6lhWMBJEy-AZmH2f4fNL16rgb6P"
-  tenant_id       = "be817ec6-52af-4f3c-b65a-504f7f6a30fa"
-
-  # Or use Azure CLI authentication:
-#   use_azure_cli_authentication = true
 }
