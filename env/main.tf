@@ -1,5 +1,5 @@
 module "rgs" {
-    source = "../modules/rgs"
+    source = "../module/rgs"
     rgs = var.rgs
     
 }
