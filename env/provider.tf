@@ -1,17 +1,23 @@
 terraform {
+    required_version = ">= 1.0.0"
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
       version = "4.14.0"
     }
+    azurerm = {
+        source = "hashicorp/azurerm"
+        version = "3.0.2"
+    }
   }
 
   backend "azurerm" {
-    resource_group_name  = "pawan-rg"
-    storage_account_name = "storage53637337"
-    container_name       = "container"
-    key                  = "prod.terraform.tfstate"
-    # use_azuread_auth     = true
+    hostname             = "storage53637337.blob.core.windows.net"
+    organization         = "pawan"
+    workspace_key_prefix = "pawan"
+    workspaces {
+        name = "pawan"
+    }
   }
 }
 
