@@ -11,16 +11,19 @@ terraform {
     storage_account_name = "storage53637337"
     container_name       = "container"
     key                  = "prod.terraform.tfstate"
-    # use_azuread_auth     = true
+    use_azuread_auth     = true
   }
 }
 
 provider "azurerm" {
   features {}
 
-  # You can also use environment variables for authentication:
+  # Use environment variables or specify credentials directly here:
   # subscription_id = "your-subscription-id"
   # client_id       = "your-client-id"
   # client_secret   = "your-client-secret"
   # tenant_id       = "your-tenant-id"
+
+  # Or use Azure CLI authentication:
+  use_azure_cli_authentication = true
 }
