@@ -1,26 +1,20 @@
-terraform {
+terraform{
     required_version = ">= 1.0.0"
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "4.14.0"
+    required_providers {
+        aws = {
+            source = "hashicorp/aws"
+            version = ">= 4.0.0"
+        }
     }
-  }
-
-  backend "azurerm" {
-    hostname             = "storage53637337.blob.core.windows.net"
-    organization         = "pawan"
-    workspace_key_prefix = "pawan"
-    workspaces {
-        name = "pawan"
+    backend "remote" {  
+        hostname = "app.terraform.io"
+        organization = "Pawan7409"
+        workspaces {
+            name = "shikar_env"
+        }
     }
-  }
 }
 
 provider "azurerm" {
-  features {}
- subscription_id = "7869862f-d28a-4869-ae00-17ce96a1935a"
-  
-
+    features {}
 }
-
