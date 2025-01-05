@@ -1,0 +1,16 @@
+network:
+  name: "vnet01"
+  resource_group_name: "pawan-rg"
+  id: ""
+  sunets:
+      private_endpoint_01:
+        name: "pe01"
+        id: ""
+        address_prefix: "38.0.101.76/24"
+        description: "pe01"
+        
+private_endpoint_subnet_id =
+vnet_integration_subnet_id =
+webapp_pe_dnszone =
+webapp_pe_dnszoneid=
+

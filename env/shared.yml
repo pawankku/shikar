@@ -1,0 +1,14 @@
+shared:
+  resource_group_name: "pawan-rg"
+  location: "eastus"
+  log_analytics_workspace_id: ""
+  tags:
+    applicationname: "pawan"
+    Approver: "pawan"
+    BusinessUnit: "people"
+    Environment: "dev"
+    costcenter: "1234"
+    owner: "pawan"  
+    ccenter: "1234"
+    Classification: "internal"
+    Serviceclass: 'silver'
