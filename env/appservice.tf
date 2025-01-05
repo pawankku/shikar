@@ -12,7 +12,7 @@ resource "azurerm_app_service" "appservice" {
 }
 
     module "app_services" {
-        source = "app.terraform.io/Pawan7409/apps/azurerm"
+        source = "./modules/appservice"
         version = "1.0.0"
         for_each = {
             for service in local.app_services : service.name => service}
