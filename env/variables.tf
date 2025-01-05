@@ -5,3 +5,6 @@ variable "rgs" {
     location = string
   }))
 }
+variable "subscription_id"{
+  type = string
+}
